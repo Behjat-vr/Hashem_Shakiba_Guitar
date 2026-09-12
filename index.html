@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f0e8">
+<meta name="description" content="آموزشگاه موسیقی استاد هاشم شکیبا؛ از لمس یک سیم، تا آغاز یک رویا.">
+<title>هاشم شکیبا | از لمس یک سیم، تا آغاز یک رویا</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="./styles.css">
+<script>window.MIDI={Soundfont:{}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/gleitz/midi-js-soundfonts@gh-pages/FluidR3_GM/acoustic_guitar_nylon-mp3.js" onload="window.dispatchEvent(new Event('samples-ready'))"></script>
+<script defer src="./audio.js"></script><script defer src="./guitar.js"></script><script defer src="./app.js"></script>
+</head>
+<body>
+<div class="page-grain" aria-hidden="true"></div>
+<div class="site-shell">
+<header class="header">
+<a class="brand" href="#" aria-label="آموزشگاه موسیقی هاشم شکیبا"><span class="brand-mark">ش</span><span><b>آموزشگاه موسیقی شکیبا</b><small>HASHEM SHAKIBA MUSIC ATELIER</small></span></a>
+<nav aria-label="منوی اصلی"><button class="text-btn" data-modal="about">درباره آموزشگاه</button><span class="nav-line"></span><button class="text-btn guide-button" data-modal="guide">راهنمای نواختن <span>↗</span></button></nav>
+</header>
+<main>
+<section class="experience" aria-label="گیتار سه‌بعدی قابل نواختن">
+<div class="arch" aria-hidden="true"></div><div class="arch arch-inner" aria-hidden="true"></div>
+<div class="hero-copy"><p class="eyebrow"><span></span> با موسیقی، عاشقانه‌تر زندگی کن <span></span></p><p class="teacher">آموزشگاه موسیقی استاد</p><h1>هاشم شکیبا</h1></div>
+<div class="vertical-label" aria-hidden="true">THE ART OF FEELING · THE JOY OF MUSIC</div>
+<div class="edition" aria-hidden="true"><span>01 /</span><b>یک ساز، هزار احساس</b></div>
+<div id="guitar-stage" role="application" aria-label="گیتار تعاملی؛ برای نواختن روی سیم یا فرت کلیک کنید. کلیدهای ۱ تا ۶ نیز سیم‌ها را می‌نوازند."><div id="scene-loading"><span class="loading-ring"></span><p>ساز دارد کوک می‌شود…</p></div></div>
+<div class="floating-note" id="pointer-note" dir="ltr" aria-hidden="true">E4</div>
+<div class="sound-caption"><span class="tiny-star">✧</span><p>از لمس یک سیم،<br><em>تا آغاز یک رویا.</em></p><div class="caption-line"></div></div>
+<div class="touch-caption"><span class="touch-icon">〰</span><p>این فقط یک تصویر نیست.<br><strong>سیم‌ها را لمس کن؛ موسیقی از تو شروع می‌شود.</strong></p></div>
+<div class="note-readout" aria-live="polite" aria-atomic="true"><span class="note-dot" id="note-dot"></span><span id="note-name" dir="ltr">E2</span><span class="note-info" id="note-info">می بم · سیم ششم · آزاد</span><span class="frequency" id="frequency" dir="ltr">82.41 Hz</span></div>
+</section>
+<section class="instrument-controls" aria-label="کنترل‌های گیتار">
+<div class="control-topline"><span class="hairline"></span><span>کمی مکث کن. کمی بنواز.</span><span class="hairline"></span></div>
+<div class="control-bar">
+<button id="start-audio" class="play-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg><span>شروع نواختن</span></button>
+<span class="control-divider"></span>
+<button id="demo" class="icon-text" title="شنیدن یک آرپژ کوتاه"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></svg><span>یک جرعه موسیقی</span></button>
+<span class="control-divider"></span>
+<div class="volume-group"><button id="mute" class="icon-btn" aria-label="بی‌صدا کردن" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4ZM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg></button><input id="volume" type="range" min="0" max="100" value="65" aria-label="بلندی صدا"></div>
+<span class="control-divider"></span>
+<button id="view" class="icon-btn" title="چرخاندن گیتار" aria-label="فعال کردن چرخش سه‌بعدی" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9ZM4 7.5l8 5 8-5m-8 5V21"/></svg></button>
+<button id="reset" class="icon-btn" title="بازگشت به نمای اصلی" aria-label="بازگشت به نمای اصلی"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg></button>
+</div>
+<div class="under-controls"><span id="audio-status"><i></i> برای فعال‌شدن صدا، یک‌بار کلیک کن</span><button id="fret-toggle">نمایش نت‌ها و فرت‌ها <span>＋</span></button></div>
+<div id="fret-panel" class="fret-panel" hidden><div class="fret-panel-heading"><p>هر سیم، یک رنگ از موسیقی</p><label>فرت <select id="fret-select" aria-label="انتخاب فرت"></select></label></div><div class="string-keys" id="string-keys"></div><p class="keyboard-help">کلیدهای ۱ تا ۶: نواختن سیم‌ها · کلیدهای جهت چپ و راست: تغییر فرت</p></div>
+</section>
+</main>
+<footer><span>با عشق به موسیقی، با احترام به سکوت.</span><span class="footer-sign">Shakiba<span> ✧ </span>Music</span><span>۶ سیم <i>·</i> ۱۹ فرت <i>·</i> بی‌نهایت احساس</span></footer>
+</div>
+<dialog id="info-dialog"><button class="dialog-close" aria-label="بستن">×</button><div id="dialog-content"></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+</body></html>
